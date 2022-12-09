@@ -1,4 +1,4 @@
-def sudoku(s):
+def sudoku():
     sudoku = [
         {5,0,0,0,4,0,0,0,9},
         {0,2,0,0,1,0,6,8,0},
@@ -10,7 +10,6 @@ def sudoku(s):
         {0,1,4,0,3,0,0,5,7},
         {0,0,5,0,8,7,0,0,0}]
     return sudoku
-    print(np.matrix(sudoku))
     for i in range(9):
         if len(set(s[i])) != 9:
             return False
@@ -22,3 +21,4 @@ def sudoku(s):
             if len(set([s[3*i+k][3*j+l] for k in range(3) for l in range(3)])) != 9:
                 return False
     return True
+print(sudoku())
